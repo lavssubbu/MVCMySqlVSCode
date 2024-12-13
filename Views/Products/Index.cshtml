@@ -1,0 +1,25 @@
+@model IEnumerable<CMSMVCApp.Models.Product>
+
+<a class="btn btn-primary" asp-controller="Products" asp-action="Create">Create Product</a>
+<h1>Product List</h1>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>ProductName</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pro in Model)
+        {
+            <tr>
+                <td>@pro.ProName</td>
+                <td><a class="btn btn-info" asp-controller="Products" asp-action="Details"
+                        asp-route-id="@pro.ProdId">Details</a></td>
+                <td><a class="btn btn-info" asp-controller="Products" asp-action="Edit"
+                        asp-route-id="@pro.ProdId">Edit</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>

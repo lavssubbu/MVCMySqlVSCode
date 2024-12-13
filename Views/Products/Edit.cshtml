@@ -1,0 +1,16 @@
+@model CMSMVCApp.Models.Product
+
+<h1>Edit Product</h1>
+<form asp-action="Edit" method="post">
+     <input type="hidden" asp-for="ProdId"/>
+    <div class="form-group">
+        <label for="ProName">ProductName</label>
+        <input asp-for="ProName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <button type="submit">Save</button>
+
+</form>
